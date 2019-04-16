@@ -39,8 +39,10 @@
 				
 			}else if (Notification.permission === "granted") {
 				console.log("granted")
+			alert("gr")	
 				var notification = new Notification(NTitle);
 			}else if (Notification.permission !== 'denied') {
+				alert("gr")
 			   Notification.requestPermission(function (permission) {
 			   if (permission === "granted") {
 			   var notification = new Notification(NTitle);
