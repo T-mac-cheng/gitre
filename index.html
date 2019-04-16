@@ -32,6 +32,30 @@
 </div>
 <script src="js/swregis.js"></script>
 <script>
+			let NTitle = "你好，我是Pwa";
+			
+			if (!("Notification" in window)) {
+				alert("This browser does not support desktop notification");
+				
+			}else if (Notification.permission === "granted") {
+				console.log("granted")
+				var notification = new Notification(NTitle);
+			}else if (Notification.permission !== 'denied') {
+			   Notification.requestPermission(function (permission) {
+			   if (permission === "granted") {
+			   var notification = new Notification(NTitle);
+			   }
+			   });
+			}
+			notification.onclick = function(event) {
+             window.open('');
+           }
+			
+			
+			
+			
+			
+
     var button = document.getElementById('btn');
     d=null;
     window.onbeforeinstallprompt=function(evevt){
