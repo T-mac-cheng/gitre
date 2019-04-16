@@ -1,6 +1,6 @@
 if ('serviceWorker' in navigator) {
     window.addEventListener('load', function () {
-        navigator.serviceWorker.register('./sw.js', {scope: '/pwa/'})
+        navigator.serviceWorker.register('./sw.js')
             .then(function (registration) {
                 // 注册成功
 				alert(1)
