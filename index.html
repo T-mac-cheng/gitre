@@ -31,26 +31,25 @@
     </div>
 </div>
 <script src="js/swregis.js"></script>
-<script src="js/init.js"></script>
 <script>
     var button = document.getElementById('btn');
     d=null;
     window.onbeforeinstallprompt=function(evevt){
         console.log(evevt)
-        d=e;
-        console.log(e)
-        e.preventDefault()
+        d=evevt;
+       
+        evevt.preventDefault()
         return false;
     }
-    self.addEventListener('beforeinstallprompt', function (e) {
-        console.log(evevt)
+  /*  self.addEventListener('beforeinstallprompt', function (e) {
+        console.log(e)
         d=e;
         console.log(e)
         e.preventDefault()
         return false;
-    });
+    });*/
     button.addEventListener("click",function () {
-        navigator.serviceWorker.controller && navigator.serviceWorker.controller.postMessage('Hello PWA')
+	navigator.serviceWorker.controller && navigator.serviceWorker.controller.postMessage('Hello PWA')
         if(d!=null){
             d.prompt()
             d=null;
