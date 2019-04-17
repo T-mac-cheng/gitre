@@ -1,6 +1,6 @@
 if ('serviceWorker' in navigator) {
     window.addEventListener('load', function () {
-        navigator.serviceWorker.register('./sw.js', {scope: '/tmac1/'})
+        navigator.serviceWorker.register('./sw.js', {scope: '/tmac2/'})
             .then(function (registration) {
                 // 注册成功
 				alert(1)
