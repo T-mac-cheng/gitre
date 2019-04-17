@@ -1,4 +1,4 @@
-/*var CACHE_NAME = 'vesion102'
+var CACHE_NAME = 'vesion102'
 var urlToCache = [
   '/index.html',
    './img/logo5.png'
@@ -55,4 +55,4 @@ self.addEventListener('fetch', function(event) {
 self.addEventListener('notificationclick', function(event) {
   sendMessage("关闭了消息");
 });
-*/
+
