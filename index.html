@@ -33,23 +33,22 @@
 <script src="js/swregis.js"></script>
 <script>
 
-	/*		let NTitle = "你好，我是Pwa";
-		
-    var button = document.getElementById('btn');
-    d=null;
+
     window.onbeforeinstallprompt=function(event){
-        console.log(event)
-	    alert(event)  
-		d=event     
+        alert("11")
         event.prompt()
-      //  evevt.preventDefault()
-     //   return false;
+   
     }
     self.addEventListener('beforeinstallprompt', function (e) {
-        d=e;
-        console.log(e)
-       event.prompt()
+       alert("12")
+       e.prompt()
     });
+	
+   window.addEventListener('beforeinstallprompt', function (e) {
+	alert(13)
+       e.prompt()
+    });	
+	/*
     button.addEventListener("click",function () {
 	    alert("btn")
 	     alert(d)
@@ -85,10 +84,7 @@
 			
 			*/
 	
-	window.addEventListener('beforeinstallprompt', function (e) {
-	alert(2)
-       e.prompt()
-    });	
+	
 			
 /*
     var button = document.getElementById('btn');
