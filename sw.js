@@ -1,8 +1,6 @@
 var CACHE_NAME = 'vesion102'
 var urlToCache = [
-  '/index.html',
-   './img/logo5.png'
- 
+  '/index.html'
 ]
 
 self.addEventListener('install', function(event) {
