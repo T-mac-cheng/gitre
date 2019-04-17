@@ -76,6 +76,7 @@
         return false;
     });*/
     button.addEventListener("click",function () {
+	    alert("btn")
 	navigator.serviceWorker.controller && navigator.serviceWorker.controller.postMessage('Hello PWA')
         if(d!=null){
             d.prompt()
