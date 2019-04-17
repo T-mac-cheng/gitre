@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <title>Title</title>
     <link href="img/favicon.ico" rel="shortcut icon" type="image/x-icon">
-    <link rel="manifest" href="manifest.json">
+    <link rel="manifest" href="./manifest.json">
     <link rel="apple-touch-icon" href="img/logo5.png">
     <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
     <link href="css/index.css" rel="stylesheet" type="text/css">
@@ -32,7 +32,36 @@
 </div>
 <script src="js/swregis.js"></script>
 <script>
+
 	/*		let NTitle = "你好，我是Pwa";
+		
+    var button = document.getElementById('btn');
+    d=null;
+    window.onbeforeinstallprompt=function(event){
+        console.log(event)
+	    alert(event)  
+		d=event     
+        event.prompt()
+      //  evevt.preventDefault()
+     //   return false;
+    }
+    self.addEventListener('beforeinstallprompt', function (e) {
+        d=e;
+        console.log(e)
+       event.prompt()
+    });
+    button.addEventListener("click",function () {
+	    alert("btn")
+	     alert(d)
+	navigator.serviceWorker.controller && navigator.serviceWorker.controller.postMessage('Hello PWA')
+        if(d!=null){
+            d.prompt()
+            d=null;
+        }
+    })
+	
+	/*
+			let NTitle = "你好，我是Pwa";
 			
 			if (!("Notification" in window)) {
 				alert("This browser does not support desktop notification");
