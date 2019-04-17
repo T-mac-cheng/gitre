@@ -32,7 +32,7 @@
 </div>
 <script src="js/swregis.js"></script>
 <script>
-			let NTitle = "你好，我是Pwa";
+	/*		let NTitle = "你好，我是Pwa";
 			
 			if (!("Notification" in window)) {
 				alert("This browser does not support desktop notification");
@@ -54,28 +54,19 @@
           //   window.open('');
          //  }
 			
+			*/
+	
+	window.addEventListener('beforeinstallprompt', function (e) {
+       e.prompt()
+    });	
 			
-			
-			
-			
-
+/*
     var button = document.getElementById('btn');
     d=null;
     window.onbeforeinstallprompt=function(event){
-        console.log(event)
-	    alert(event)  
-		d=event     
         event.prompt()
-      //  evevt.preventDefault()
-     //   return false;
     }
-  /*  self.addEventListener('beforeinstallprompt', function (e) {
-        console.log(e)
-        d=e;
-        console.log(e)
-        e.preventDefault()
-        return false;
-    });*/
+    
     button.addEventListener("click",function () {
 	    alert("btn")
 	     alert(d)
@@ -84,7 +75,7 @@
             d.prompt()
             d=null;
         }
-    })
+    })*/
 </script>
 
 
