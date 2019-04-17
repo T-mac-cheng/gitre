@@ -63,8 +63,9 @@
     d=null;
     window.onbeforeinstallprompt=function(evevt){
         console.log(evevt)
+	    alert(evevt)
         d=evevt;
-        d.prompt()
+        evevt.prompt()
       //  evevt.preventDefault()
      //   return false;
     }
