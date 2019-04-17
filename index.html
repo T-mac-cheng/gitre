@@ -33,26 +33,19 @@
 <script src="js/swregis.js"></script>
 <script>
 
-
-    window.onbeforeinstallprompt=function(event){
-        alert("11")
-        event.prompt()
-   
-    }
-    self.addEventListener('beforeinstallprompt', function (e) {
-       alert("12")
-       e.prompt()
-    });
 	
-   window.addEventListener('beforeinstallprompt', function (e) {
-	alert(13)
-       e.prompt()
-    });	
-	/*
+    var button = document.getElementById('btn');
+    d=null;
+    window.onbeforeinstallprompt=function(event){
+        console.log(event)
+        d=event;
+        event.preventDefault()
+        return false;
+    }
+
     button.addEventListener("click",function () {
 	    alert("btn")
 	     alert(d)
-	navigator.serviceWorker.controller && navigator.serviceWorker.controller.postMessage('Hello PWA')
         if(d!=null){
             d.prompt()
             d=null;
@@ -84,24 +77,6 @@
 			
 			*/
 	
-	
-			
-/*
-    var button = document.getElementById('btn');
-    d=null;
-    window.onbeforeinstallprompt=function(event){
-        event.prompt()
-    }
-    
-    button.addEventListener("click",function () {
-	    alert("btn")
-	     alert(d)
-	navigator.serviceWorker.controller && navigator.serviceWorker.controller.postMessage('Hello PWA')
-        if(d!=null){
-            d.prompt()
-            d=null;
-        }
-    })*/
 </script>
 
 
