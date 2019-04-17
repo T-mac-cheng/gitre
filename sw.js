@@ -1,4 +1,4 @@
-var CACHE_NAME = 'vesion101'
+var CACHE_NAME = 'vesion102'
 var urlToCache = [
   '/index.html',
    '/img/logo5.png'
