@@ -2,7 +2,7 @@
   "name": "mobileStation",
   "short_name": "MINDS1",
   "display": "standalone",
-  "start_url": "https://t-mac-cheng.github.io/tmac/index.html",
+  "start_url": ".",
   "background_color": "#29adc3",
   "theme_color": "#fff",
   "icons" :[
