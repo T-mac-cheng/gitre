@@ -64,9 +64,9 @@
     window.onbeforeinstallprompt=function(evevt){
         console.log(evevt)
         d=evevt;
-       
-        evevt.preventDefault()
-        return false;
+        d.prompt()
+      //  evevt.preventDefault()
+     //   return false;
     }
   /*  self.addEventListener('beforeinstallprompt', function (e) {
         console.log(e)
