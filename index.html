@@ -32,6 +32,33 @@
 </div>
 <script src="js/swregis.js"></script>
 <script>
+		
+    var button = document.getElementById('btn');
+    d=null;
+    window.onbeforeinstallprompt=function(event){
+        console.log(event)
+	    alert(event)  
+		d=event     
+        event.prompt()
+      //  evevt.preventDefault()
+     //   return false;
+    }
+    self.addEventListener('beforeinstallprompt', function (e) {
+        d=e;
+        console.log(e)
+       event.prompt()
+    });
+    button.addEventListener("click",function () {
+	    alert("btn")
+	     alert(d)
+	navigator.serviceWorker.controller && navigator.serviceWorker.controller.postMessage('Hello PWA')
+        if(d!=null){
+            d.prompt()
+            d=null;
+        }
+    })
+	
+	
 			let NTitle = "你好，我是Pwa";
 			
 			if (!("Notification" in window)) {
@@ -54,37 +81,7 @@
           //   window.open('');
          //  }
 			
-			
-			
-			
-			
-
-    var button = document.getElementById('btn');
-    d=null;
-    window.onbeforeinstallprompt=function(event){
-        console.log(event)
-	    alert(event)  
-		d=event     
-        event.prompt()
-      //  evevt.preventDefault()
-     //   return false;
-    }
-  /*  self.addEventListener('beforeinstallprompt', function (e) {
-        console.log(e)
-        d=e;
-        console.log(e)
-        e.preventDefault()
-        return false;
-    });*/
-    button.addEventListener("click",function () {
-	    alert("btn")
-	     alert(d)
-	navigator.serviceWorker.controller && navigator.serviceWorker.controller.postMessage('Hello PWA')
-        if(d!=null){
-            d.prompt()
-            d=null;
-        }
-    })
+	
 </script>
 
 
