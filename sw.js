@@ -1,12 +1,13 @@
 var CACHE_NAME = 'vesion102'
 var urlToCache = [
-  '/index.html'
+  './img/logo5.png'
 ]
 
 self.addEventListener('install', function(event) {
   event.waitUntil(
     caches.open(CACHE_NAME)
       .then(function(cache) {
+        console.log('ins')
         return cache.addAll(urlToCache)
       })
       .catch(function(err){
