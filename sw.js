@@ -1,7 +1,7 @@
 var CACHE_NAME = 'vesion102'
 var urlToCache = [
   '/index.html',
-   '/img/logo5.png'
+   './img/logo5.png'
  
 ]
 
